@@ -1,47 +1,86 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  repo: wolfrobert35/netlifycms
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "mirror"
+    label: "Zrcadlo"
+    folder: "src/pages/mirror"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mirror"}
+      - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Cena v CZK", name: "cena", widget: "number"}
+      - {label: "Price in EUR", name: "price", widget: "number"}
+      - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
-  - name: "pages"
-    label: "Pages"
+  - name: "photography"
+    label: "Fotka"
+    folder: "src/pages/photography"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "photography"}
+      - {label: "Název", name: "nazev", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Cena v CZK", name: "cena", widget: "number"}
+      - {label: "Price in EUR", name: "price", widget: "number"}
+      - {label: "Obrázek", name: "thumbnail", widget: "image"}
+
+  - name: "jewellery"
+    label: "Šprek"
+    folder: "src/pages/jewellery"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "jewellery"}
+      - {label: "Název", name: "nazev", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Cena v CZK", name: "cena", widget: "number"}
+      - {label: "Price in EUR", name: "price", widget: "number"}
+      - {label: "Obrázek", name: "thumbnail", widget: "image"}
+
+  - name: "glass"
+    label: "Sklo"
+    folder: "src/pages/glass"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "glass"}
+      - {label: "Název", name: "nazev", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Cena v CZK", name: "cena", widget: "number"}
+      - {label: "Price in EUR", name: "price", widget: "number"}
+      - {label: "Obrázek", name: "thumbnail", widget: "image"}
+
+  - name: "general"
+    label: "Obecně"
     files:
-      - file: "src/pages/about/about.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/index.md"
+        label: "Hlavní stránka"
+        name: "frontpage"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/about"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/product/product.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/products"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - label: "O nás"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+              - {label: "Popis", name: "popis", widget: "text"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact"}
+              - {label: "Kontaktní email", name: "mail", widget: "string"}
+              - {label: "Telefoní číslo", name: "phone", widget: "string"}
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+          - label: "Objednávka"
+            name: "order"
+            widget: "object"
+            fields:
+              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "order"}
+              - {label: "Informace česky", name: "mail", widget: "text"}
+              - {label: "English instrucitons", name: "facebook", widget: "text"}
