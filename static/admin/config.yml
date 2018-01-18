@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: wolfrobert35/netlifycms
+  repo: wolfrobert35/jnj
 
 media_folder: static/img
 public_folder: /img
