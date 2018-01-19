@@ -84,13 +84,12 @@ collections:
               - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
               - {label: "Informace česky", name: "mail", widget: "text"}
               - {label: "English instrucitons", name: "facebook", widget: "text"}
-
-  - file: "src/pages/mirror.md"
-    label: "Zrcadlo"
-    name: "mirror-page"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mirror-page"}
-      - {label: "Název", name: "nazev", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Popis", name: "popis", widget: "text"}
-      - {label: "Description", name: "description", widget: "number"}
+      - file: "src/pages/mirror.md"
+        label: "Zrcadlo"
+        name: "mirror-page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mirror-page"}
+          - {label: "Název", name: "nazev", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Popis", name: "popis", widget: "text"}
+          - {label: "Description", name: "description", widget: "number"}
