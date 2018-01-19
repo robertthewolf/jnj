@@ -3,33 +3,33 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 
-export default class IndexPage extends React.Component {
-  handleScriptLoad() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-    window.netlifyIdentity.init();
-  }
+export default class MirrorPage extends React.Component {
+
 
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
       <section className="section">
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={this.handleScriptLoad.bind(this)}
-        />
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
+          {posts.filter(post => post.node.frontmatter.templateKey === 'mirror').map(({ node: post }) => {
+            return (
+              <div className="thumbnail" key={post.id}>
+                <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} />
+                <p>
+                  {post.frontmatter.nazev}
+                  {post.frontmatter.title}
+                </p>
+                <p>
+                  {post.frontmatter.cena}
+                  {post.frontmatter.price}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
     );
@@ -37,7 +37,7 @@ export default class IndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query MirrorQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -45,6 +45,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
+            nazev
             templateKey
             date(formatString: "MMMM DD, YYYY")
             path

@@ -13,9 +13,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             frontmatter {
               templateKey
+              nazev
+              title
+              cena
+              price
+              thumbnail
               path
               date
-              title
               image
               heading
               description

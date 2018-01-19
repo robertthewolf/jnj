@@ -1,27 +1,100 @@
-@import "~bulma/sass/utilities/initial-variables"
+//colors
 
-// Config
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+$black: #111 !important
+$white: #fff !important
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+//fonts
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
-  background-size: cover
-  background-position: bottom
+@font-face
+  src: url('../fonts/Phenomena-Regular.woff')
+  font-family: 'Phenomena'
+  font-weight: 400
+
+@font-face
+  src: url('../fonts/Phenomena-Bold.woff')
+  font-family: 'Phenomena'
+  font-weight: 600
+
+
+//language switch
+
+.en, .cs
+  display: none
+
+.en:lang(en), .cs:lang(cs)
+  display: block
+
+
+// basic layout
+
+body
+  background-color: $white
+  color: $black
+
+div[data-reactroot]
   display: flex
-  justify-content: center
-  align-items: center
+  flex-direction: row
+  flex-shrink: 0
 
-.margin-top-0
-  margin-top: 0 !important
+  height: 100vh
+  overflow-y: hidden
+  *
+    max-height: 100%
 
-@import "~bulma"
+// navigation
+
+nav
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+
+  margin-left: 15vh
+  margin-right: -2em
+  img
+    width: 4em
+
+    position: relative
+    z-index: 3
+  ul
+    list-style-type: none
+    margin-left: .5em
+    a
+      text-decoration: none
+      text-transform: uppercase
+      color: $black
+      opacity: .55
+      &.active
+        position: relative
+        z-index: 5
+        opacity: 1
+        font-weight: 600
+
+
+
+// product pages
+
+figure.thumbnail
+  position: relative
+  > img
+    max-width: 100vw
+    max-height: 100vh
+    object-fit: cover
+    &:first-of-type
+      height: 100vh
+      width: 100vh
+      object-fit: cover
+  > figcaption
+      position: absolute
+      top: 1em
+      right: 1em
+
+      color: $white
+      font-weight: 600
+      text-align: right
+
+      opacity: 0
+      transition: opacity 1s ease
+      > small
+        font-weight: 400
+  &:hover > figcaption
+    opacity: 1
