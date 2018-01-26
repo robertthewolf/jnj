@@ -8,10 +8,11 @@ public_folder: /img
 collections:
   - name: "mirror"
     label: "Zrcadlo"
-    folder: "src/pages/mirror"
+    folder: "src/pages/products/mirror"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mirror"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
+      - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Cena v CZK", name: "cena", widget: "number"}
@@ -20,10 +21,11 @@ collections:
 
   - name: "photography"
     label: "Fotka"
-    folder: "src/pages/photography"
+    folder: "src/pages/products/photography"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "photography"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
+      - {label: "Category", name: "category", widget: "hidden", default: "photography"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Cena v CZK", name: "cena", widget: "number"}
@@ -32,10 +34,11 @@ collections:
 
   - name: "jewellery"
     label: "Šprek"
-    folder: "src/pages/jewellery"
+    folder: "src/pages/products/jewellery"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "jewellery"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
+      - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Cena v CZK", name: "cena", widget: "number"}
@@ -44,10 +47,11 @@ collections:
 
   - name: "glass"
     label: "Sklo"
-    folder: "src/pages/glass"
+    folder: "src/pages/products/glass"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "glass"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
+      - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Cena v CZK", name: "cena", widget: "number"}
@@ -57,7 +61,7 @@ collections:
   - name: "general"
     label: "Obecně"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/categories/general.md"
         label: "Hlavní stránka"
         name: "frontpage"
         fields:
@@ -72,24 +76,45 @@ collections:
             name: "contact"
             widget: "object"
             fields:
-              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-              - {label: "Kontaktní email", name: "mail", widget: "string"}
-              - {label: "Telefoní číslo", name: "phone", widget: "string"}
               - {label: "Facebook", name: "facebook", widget: "string"}
               - {label: "Instagram", name: "instagram", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Telefon", name: "phone", widget: "string"}
           - label: "Objednávka"
             name: "order"
             widget: "object"
             fields:
-              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-              - {label: "Informace česky", name: "mail", widget: "text"}
-              - {label: "English instrucitons", name: "facebook", widget: "text"}
-      - file: "src/pages/mirror.md"
+              - {label: "Objednávka", name: "objednavka", widget: "text"}
+              - {label: "Order", name: "order", widget: "text"}
+      - file: "src/categories/mirror.md"
         label: "Zrcadlo"
         name: "mirror-page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mirror-page"}
-          - {label: "Název", name: "nazev", widget: "string"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
+          - {label: "Popis", name: "popis", widget: "text"}
+          - {label: "Description", name: "description", widget: "number"}
+      - file: "src/categories/photography.md"
+        label: "Zrcadlo"
+        name: "photography-page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Category", name: "category", widget: "hidden", default: "photography"}
+          - {label: "Popis", name: "popis", widget: "text"}
+          - {label: "Description", name: "description", widget: "number"}
+      - file: "src/categories/jewellery.md"
+        label: "Zrcadlo"
+        name: "jewellery-page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
+          - {label: "Popis", name: "popis", widget: "text"}
+          - {label: "Description", name: "description", widget: "number"}
+      - file: "src/categories/glass.md"
+        label: "Zrcadlo"
+        name: "glass-page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Category", name: "category", widget: "hidden", default: "glass"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "number"}

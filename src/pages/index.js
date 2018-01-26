@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
+import Toggle from '../components/Toggle';
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -19,38 +20,34 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { markdownRemark: post } = data;
     return (
       <section className="section">
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={this.handleScriptLoad.bind(this)}
         />
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
-        </div>
+        <header>
+          <p>
+            <span className="en">{post.frontmatter.description}</span>
+            <span className="cs">{post.frontmatter.popis}</span>
+            <Toggle></Toggle>
+          </p>
+        </header>
       </section>
     );
   }
 }
 
-export const pageQuery = graphql`
+export const indexPageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
+    markdownRemark (frontmatter: { category: { eq: "general" } }) {
+      frontmatter {
+        title
+        nazev
+        popis
+        description
       }
     }
-  }
+}
 `;

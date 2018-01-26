@@ -14,23 +14,27 @@ const Navbar = () => (
       </Link>
       <ul>
         <li>
-          <Link activeClassName="active" to={`/m/`}>
-            Zrcadlo
+          <Link activeClassName="active" to={`/mirror/`}>
+            <span className="en">Mirror</span>
+            <span className="cs">Zrcadlo</span>
           </Link>
         </li>
         <li>
           <Link activeClassName="active" to={`/photography/`}>
-            Fotka
+            <span className="en">Photography</span>
+            <span className="cs">Fotka</span>
           </Link>
         </li>
         <li>
           <Link activeClassName="active" to={`/jewellery/`}>
-            Šperk
+            <span className="en">Jewellery</span>
+            <span className="cs">Šperk</span>
           </Link>
         </li>
         <li>
           <Link activeClassName="active" to={`/glass/`}>
-            Sklo
+            <span className="en">Glass</span>
+            <span className="cs">Sklo</span>
           </Link>
         </li>
       </ul>
