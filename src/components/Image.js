@@ -10,8 +10,8 @@ export default class Image extends React.Component {
       this.state = {
           active: false,
       };
-  }
 
+  }
 
   addClass() {
   };

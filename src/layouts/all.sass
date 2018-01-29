@@ -51,7 +51,8 @@ body
   background-color: $white
   color: $black
   .hover
-    background-color: black
+    background-color: $black
+
 
 div[data-reactroot]
   display: flex
@@ -60,7 +61,8 @@ div[data-reactroot]
 
   height: 100vh
   overflow-y: hidden
-  *
+
+  > *
     max-height: 100%
 
 // navigation
@@ -96,34 +98,6 @@ nav
 
 
 
-// product pages
-
-figure.thumbnail
-  position: relative
-  > img
-    max-width: 100vw
-    max-height: 100vh
-    object-fit: cover
-    &:first-of-type
-      height: 100vh
-      width: 100vh
-      object-fit: cover
-  > figcaption
-      position: absolute
-      top: 1em
-      left: 1em
-
-      color: $white
-      font-weight: 600
-
-      opacity: 0
-      transition: opacity 1s ease
-      > small
-        font-weight: 400
-        display: block
-  &:hover > figcaption
-    opacity: 1
-
 
 // sections
 
@@ -135,10 +109,14 @@ figure.thumbnail
   animation-fill-mode: forwards
 
   display: flex
+  flex-direction: column
+  flex-wrap: wrap
+
   > header
     order: 2
     width: 20em
     padding: calc(20vh - 2em) 2em 5vh
+    height: 100vh
     p
       position: relative
       &::before
@@ -148,13 +126,47 @@ figure.thumbnail
         position: absolute
         transform: translate(-3.5em, .93em)
         z-index: 5
+
   figure
-    order: 3
-    margin: 2em
-    overflow: hidden
+    position: relative
+    > figcaption
+        position: absolute
+        top: 1em
+        left: 1em
+
+        color: $white
+        font-weight: 600
+
+        opacity: 0
+        transition: opacity 1s ease
+        > small
+          font-weight: 400
+          display: block
+    &:hover > figcaption
+      opacity: 1
     &:first-of-type
       order: 1
       margin: 0
+      > img
+        height: 100vh
+        width: 100vh
+        object-fit: cover
+    &:nth-of-type(n+2)
+      order: 3
+      margin: 2em
+      height: calc(100vh - 4em)
+      @media screen and (min-height: 500px)
+        height: calc(50vh - 4em)
+      > img
+        height: 100%
+        object-fit: cover
+    &:nth-of-type(3n + 8)
+      margin: 2em 4em
+      @media screen and (min-height: 500px)
+        height: calc(100vh - 4em)
+
+    &:last-of-type
+      padding-right: 4em
 
 @keyframes appear
   0%

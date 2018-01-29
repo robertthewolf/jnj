@@ -15,7 +15,7 @@ export default class PhotographyPage extends React.Component {
       <section className="section">
         {posts.filter(post => post.node.frontmatter.templateKey === 'page').map(({ node: post }) => {
           return (
-            <header>
+            <header key={post.id}>
         <p>
           <span className="en">{post.frontmatter.description}</span>
           <span className="cs">{post.frontmatter.popis}</span>

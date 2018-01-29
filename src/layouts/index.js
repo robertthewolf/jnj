@@ -6,6 +6,7 @@ import logo from '../img/logo.svg';
 import Typography from 'typography';
 import './all.sass';
 
+
 const Navbar = () => (
   <nav>
       <Link to="/">
@@ -46,8 +47,8 @@ const TemplateWrapper = ({ children }) => (
       title="Home | Gatsby + Netlify CMS"
       htmlAttributes={{"lang": "en"}}
     />
-    <Navbar />
-    <div>{children()}</div>
+      <Navbar />
+      {children()}
   </div>
 );
 
