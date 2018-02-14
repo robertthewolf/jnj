@@ -55,15 +55,14 @@ body
 
 
 div[data-reactroot]
-  display: flex
-  flex-direction: row
-  flex-shrink: 0
-
   height: 100vh
   overflow-y: hidden
 
   > *
     max-height: 100%
+
+.scrollWrapper
+  display: flex
 
 // navigation
 
@@ -111,6 +110,8 @@ nav
   display: flex
   flex-direction: column
   flex-wrap: wrap
+
+  min-width: 100vw
 
   > header
     order: 2

@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-export default class Image extends React.Component {
+class Image extends React.Component {
 
   constructor(props) {
       super(props);
@@ -31,3 +31,26 @@ export default class Image extends React.Component {
     );
   }
 }
+
+const GetImageSizes = graphql`
+query GetImageSizes($path: Int!) {
+  file(relativePath: { regex: $path }) {
+    childImageSharp {
+      sizes {
+        base64
+        tracedSVG
+        aspectRatio
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        originalImg
+        originalName
+      }
+    }
+  }
+}
+`;
+
+export default Image;
