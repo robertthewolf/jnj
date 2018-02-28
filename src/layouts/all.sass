@@ -3,6 +3,20 @@
 $black: #111 !important
 $white: #fff !important
 
+//breakpoints
+
+@mixin breakpoint($class)
+  @if $class == sm
+    @media (max-width: 767px)
+      @content
+
+  @else if $class == lg
+    @media (min-width: 768px)
+      @content
+
+  @else
+    @warn "Breakpoint mixin supports: xs, sm, md, lg"
+
 //fonts
 
 @font-face
@@ -54,35 +68,53 @@ body
 
 
 div[data-reactroot]
-  height: 100vh
-  overflow-y: hidden
+  @include breakpoint(sm)
+    width: 100vw
+    overflow-x: hidden
+  @include breakpoint(lg)
+    height: 100vh
+    overflow-y: hidden
+
 
   > *
     max-height: 100%
 
 .scrollWrapper
-  display: flex
+  @include breakpoint(lg)
+    display: flex
 
 // navigation
 
 nav
-  display: flex
-  flex-direction: column
-  justify-content: space-around
-  flex-shrink: 0
-
-  width: 5em
-  margin-left: 15vh
-  margin-right: 15vh
-  img
-    width: 4em
+  @include breakpoint(lg)
+    display: flex
+    justify-content: space-around
+    flex-direction: column
     flex-shrink: 0
 
-    position: relative
-    z-index: 3
+    width: 5em
+    margin-left: 15vh
+    margin-right: 15vh
+  a
+    @include breakpoint(sm)
+    display: flex
+    justify-content: center
+    img
+      width: 4em
+      flex-shrink: 0
+
+      position: relative
+      z-index: 3
   ul
     list-style-type: none
     margin-left: .2em
+    @include breakpoint(sm)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+    li
+      @include breakpoint(sm)
+      width: 50%
     a
       text-decoration: none
       text-transform: uppercase
@@ -112,12 +144,13 @@ nav
 
   min-width: 100vw
 
-  
+
   > header
     order: 2
-    width: 20em
     padding: calc(20vh - 2em) 2em 5vh
-    height: 100vh
+    @include breakpoint(lg)
+      height: 100vh
+      width: 20em
     p
       position: relative
       &::before
@@ -138,7 +171,8 @@ nav
         color: $white
         font-weight: 600
 
-        opacity: 0
+        @include breakpoint(lg)
+          opacity: 0
         transition: opacity 1s ease
         > small
           font-weight: 400
@@ -149,9 +183,10 @@ nav
       order: 1
       margin: 0
       > img
-        height: 100vh
         width: 100vh
         object-fit: cover
+        @include breakpoint(lg)
+          height: 100vh
     &:nth-of-type(n+2)
       order: 3
       margin: 2em
@@ -167,16 +202,18 @@ nav
         height: calc(100vh - 4em)
 
     &:last-of-type
+      @include breakpoint(lg)
       padding-right: 4em
 
 // footer
 
 footer
   order: 4
-  width: 20em
   padding: calc(20vh - 2em) 2em 5vh
-  height: 100vh
   background-color: #222222
+  @include breakpoint(lg)
+    height: 100vh
+    width: 20em
   p
     color: #fff
   a
@@ -186,13 +223,14 @@ footer
       text-decoration: none
 
 .signature
-  position: absolute
-  bottom: 1em
-  left: 50%
-  transform: translateX(-50%)
-  
+  font-size: .8rem
+  color: grey
+  margin-top: 4rem
+  text-align: center
+
   a
-    color: black
+    display: inline
+    color: grey
     &:hover
       text-decoration: none
 
@@ -201,5 +239,3 @@ footer
     opacity: 0
   100%
     opacity: 1
-
-

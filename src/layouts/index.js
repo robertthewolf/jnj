@@ -6,22 +6,35 @@ import Typography from 'typography';
 import './all.sass';
 
 import HorizontalScroll from 'react-scroll-horizontal';
+import MediaQuery from 'react-responsive';
+
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 
 
 const TemplateWrapper = ({ children }) => (
   <div>
+    
     <Helmet htmlAttributes={{"lang": "en"}}>
       <title>JNJ Art Group</title>
     </Helmet>
+
+    <MediaQuery maxDeviceWidth={768}>
+      <div className="scrollWrapper">
+        <Navbar />
+        {children()}
+      </div>
+    </MediaQuery>
+
+    <MediaQuery minDeviceWidth={768}>
       <HorizontalScroll>
         <div className="scrollWrapper">
           <Navbar />
-        {children()}
-      </div>
+          {children()}
+        </div>
       </HorizontalScroll>
+    </MediaQuery>
+
   </div>
 );
 
