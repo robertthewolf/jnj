@@ -44,7 +44,6 @@ button
     animation-fill-mode: forwards
 
 
-
 // basic layout
 
 body
@@ -113,6 +112,7 @@ nav
 
   min-width: 100vw
 
+  
   > header
     order: 2
     width: 20em
@@ -169,8 +169,37 @@ nav
     &:last-of-type
       padding-right: 4em
 
+// footer
+
+footer
+  order: 4
+  width: 20em
+  padding: calc(20vh - 2em) 2em 5vh
+  height: 100vh
+  background-color: #222222
+  p
+    color: #fff
+  a
+    color: white
+    display: block
+    &:hover
+      text-decoration: none
+
+.signature
+  position: absolute
+  bottom: 1em
+  left: 50%
+  transform: translateX(-50%)
+  
+  a
+    color: black
+    &:hover
+      text-decoration: none
+
 @keyframes appear
   0%
     opacity: 0
   100%
     opacity: 1
+
+

@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 import Toggle from '../components/Toggle';
+import Signature from '../components/Signature';
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -31,9 +32,21 @@ export default class IndexPage extends React.Component {
           <p>
             <span className="en">{post.frontmatter.description}</span>
             <span className="cs">{post.frontmatter.popis}</span>
-            <Toggle></Toggle>
+            <Toggle/>
           </p>
         </header>
+        <footer>
+
+          <p>
+            <span className="en">{post.frontmatter.order}</span>
+            <span className="cs">{post.frontmatter.objednavka}</span>
+          </p>
+          <a href="mailto:jnjartgroup@gmail.com">jnjartgroup@gmail.com</a>
+          <a href="tel:+420776833746">+420 776 833 746</a>
+          <div className="socials">
+          </div>
+          </footer>
+          <Signature/>
       </section>
     );
   }
@@ -47,6 +60,8 @@ export const indexPageQuery = graphql`
         nazev
         popis
         description
+        order
+        objednavka
       }
     }
 }

@@ -13,17 +13,15 @@ import Footer from '../components/Footer';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title="Home | Gatsby + Netlify CMS"
-      htmlAttributes={{"lang": "en"}}
-    />
+    <Helmet htmlAttributes={{"lang": "en"}}>
+      <title>JNJ Art Group</title>
+    </Helmet>
       <HorizontalScroll>
         <div className="scrollWrapper">
           <Navbar />
         {children()}
       </div>
       </HorizontalScroll>
-          <Footer />
   </div>
 );
 
