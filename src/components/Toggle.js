@@ -26,6 +26,7 @@ export default class Toggle extends React.Component {
 
     }
 
+
   }
 
   render() {

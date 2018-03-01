@@ -12,7 +12,7 @@ constructor() {
 render() {
   return(
     <div className="signature">
-        Made by <a href="http://robertwolf.cz/">Robert Wolf</a>  ♥ {this.state.year}
+        Made by <a rel="external" target="_blank" href="http://robertwolf.cz/">Robert Wolf</a>  ♥ {this.state.year}
     </div>
   );
   }

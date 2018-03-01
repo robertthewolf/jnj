@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from "gatsby-image";
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 
@@ -24,19 +25,20 @@ export default class MirrorPage extends React.Component {
           );
         })}
           {posts.filter(post => post.node.frontmatter.templateKey === 'single').map(({ node: post }) => {
+
+            const aspect = post.frontmatter.thumbnail.childImageSharp.sizes.aspectRatio
+            const styleData = { width: `calc(var(--height)*${aspect})` }
+
             return (
               <figure className="thumbnail" key={post.id}>
-                <Image
-                  path={post.frontmatter.thumbnail}
+                <Img
+                  sizes={post.frontmatter.thumbnail.childImageSharp.sizes}
+                  style={styleData}
                   title={post.frontmatter.title}
                 />
                 <figcaption>
-                  <span className="cs">{post.frontmatter.nazev}</span>
-                  <span className="en">{post.frontmatter.title}</span>
-                  <small>
                     <span className="cs">{post.frontmatter.cena} CZK</span>
                     <span className="en">{post.frontmatter.price} EUR</span>
-                  </small>
                 </figcaption>
               </figure>
             );
@@ -59,7 +61,13 @@ export const mirrorPageQuery = graphql`
             title
             cena
             price
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 700) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
             description
             popis
           }

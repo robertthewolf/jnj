@@ -107,7 +107,6 @@ nav
       z-index: 3
   ul
     list-style-type: none
-    margin-left: .2em
     @include breakpoint(sm)
       display: flex
       flex-wrap: wrap
@@ -144,7 +143,6 @@ nav
 
   min-width: 100vw
 
-
   > header
     order: 2
     padding: calc(20vh - 2em) 2em 5vh
@@ -163,6 +161,16 @@ nav
 
   figure
     position: relative
+    .gatsby-image-outer-wrapper
+      width: 100%
+      height: 100%
+      .gatsby-image-wrapper
+        width: 100%
+        height: 100%
+        overflow-x: visible !important
+        img
+          height: 100%
+
     > figcaption
         position: absolute
         top: 1em
@@ -182,24 +190,24 @@ nav
     &:first-of-type
       order: 1
       margin: 0
-      > img
+      .gatsby-image-outer-wrapper
         width: 100vh
-        object-fit: cover
         @include breakpoint(lg)
           height: 100vh
     &:nth-of-type(n+2)
       order: 3
       margin: 2em
       height: calc(100vh - 4em)
-      @media screen and (min-height: 500px)
-        height: calc(50vh - 4em)
-      > img
+      @include breakpoint(lg)
+        --height: calc(50vh - 4em)
+        height: var(--height)
+      .gatsby-image-outer-wrapper
         height: 100%
-        object-fit: cover
     &:nth-of-type(3n + 8)
       margin: 2em 4em
-      @media screen and (min-height: 500px)
-        height: calc(100vh - 4em)
+      @include breakpoint(lg)
+        --height: calc(100vh - 4em)
+        height: var(--height)
 
     &:last-of-type
       @include breakpoint(lg)
@@ -214,6 +222,8 @@ footer
   @include breakpoint(lg)
     height: 100vh
     width: 20em
+    display: flex
+    flex-direction: column
   p
     color: #fff
   a
@@ -227,6 +237,8 @@ footer
   color: grey
   margin-top: 4rem
   text-align: center
+  @include breakpoint(lg)
+    margin-top: auto
 
   a
     display: inline

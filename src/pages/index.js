@@ -45,8 +45,8 @@ export default class IndexPage extends React.Component {
           <a href="tel:+420776833746">+420 776 833 746</a>
           <div className="socials">
           </div>
-          </footer>
           <Signature/>
+          </footer>
       </section>
     );
   }

@@ -12,31 +12,43 @@ import Navbar from '../components/Navbar';
 
 
 
-const TemplateWrapper = ({ children }) => (
-  <div>
+class TemplateWrapper extends React.Component {
+
+
+  componentDidMount() {
+  }
+
+  render() {
     
-    <Helmet htmlAttributes={{"lang": "en"}}>
-      <title>JNJ Art Group</title>
-    </Helmet>
+    const language = typeof window !== 'undefined'? navigator.userLanguage || navigator.language : 'cs-CZ';
 
-    <MediaQuery maxDeviceWidth={768}>
-      <div className="scrollWrapper">
-        <Navbar />
-        {children()}
+    return (
+      <div>
+
+        <Helmet htmlAttributes={{"lang": language}}>
+          <title>JNJ Art Group</title>
+        </Helmet>
+
+        <MediaQuery maxDeviceWidth={768}>
+          <div className="scrollWrapper">
+            <Navbar></Navbar>
+            {this.props.children()}
+          </div>
+        </MediaQuery>
+
+        <MediaQuery minDeviceWidth={768}>
+          <HorizontalScroll>
+            <div className="scrollWrapper">
+              <Navbar></Navbar>
+              {this.props.children()}
+            </div>
+          </HorizontalScroll>
+        </MediaQuery>
+
       </div>
-    </MediaQuery>
-
-    <MediaQuery minDeviceWidth={768}>
-      <HorizontalScroll>
-        <div className="scrollWrapper">
-          <Navbar />
-          {children()}
-        </div>
-      </HorizontalScroll>
-    </MediaQuery>
-
-  </div>
-);
+    );
+  }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
