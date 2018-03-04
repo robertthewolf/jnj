@@ -107,7 +107,9 @@ nav
       position: relative
       z-index: 3
   ul
+    white-space: nowrap
     list-style-type: none
+    margin-left: 0
     @include breakpoint(sm)
       display: flex
       flex-wrap: wrap
@@ -168,7 +170,7 @@ nav
       .gatsby-image-wrapper
         width: 100%
         height: 100%
-        overflow-x: visible !important
+        overflow: visible !important
         img
           height: 100%
 
