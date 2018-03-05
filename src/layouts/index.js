@@ -20,14 +20,10 @@ class TemplateWrapper extends React.Component {
     isTouch: false
   })
 
-  componentDidMount() {
-    window.addEventListener('touchstart', function() {
-      this.setState({
-        isTouch: true
-      })
+  handleTouchStart = () => {
+    this.setState({
+      isTouch: true
     })
-
-    
   }
 
   render() {
@@ -41,34 +37,24 @@ class TemplateWrapper extends React.Component {
       </div>
     );
 
-    console.log(this.state.isTouch)
-    if (this.state.isTouch === false) {
-      return (
-        <div>
-  
-          <Helmet htmlAttributes={{"lang": language}}>
-            <title>JNJ Art Group</title>
-          </Helmet>
-  
-        
-        <HorizontalScroll>
-          {ScrollContent}
-        </HorizontalScroll>
-  
-        </div>
-      );
-    }
+    let ScrollContainer  = (
+      <HorizontalScroll>
+        {ScrollContent}
+      </HorizontalScroll>
+    );
+
+    if (this.state.isTouch === true) ScrollContainer = ScrollContent;
 
     return (
-      <div>
+      <div onTouchStart={this.handleTouchStart}>
   
-      <Helmet htmlAttributes={{"lang": language}}>
-        <title>JNJ Art Group</title>
-      </Helmet>
+        <Helmet htmlAttributes={{"lang": language}}>
+          <title>JNJ Art Group</title>
+        </Helmet>
 
-      {ScrollContent}
+        {ScrollContainer}
 
-    </div>
+      </div>
     )
 
   }
