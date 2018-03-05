@@ -10,43 +10,67 @@ import MediaQuery from 'react-responsive';
 
 import Navbar from '../components/Navbar';
 
+//working on this!
+import mediumZoom from 'medium-zoom'
 
 
 class TemplateWrapper extends React.Component {
 
+  state = ({
+    isTouch: false
+  })
 
   componentDidMount() {
+    window.addEventListener('touchstart', function() {
+      this.setState({
+        isTouch: true
+      })
+    })
+
+    
   }
 
   render() {
     
     const language = typeof window !== 'undefined'? navigator.userLanguage || navigator.language : 'cs-CZ';
 
-    return (
-      <div>
-
-        <Helmet htmlAttributes={{"lang": language}}>
-          <title>JNJ Art Group</title>
-        </Helmet>
-
-        <MediaQuery maxDeviceWidth={768}>
-          <div className="scrollWrapper">
-            <Navbar></Navbar>
-            {this.props.children()}
-          </div>
-        </MediaQuery>
-
-        <MediaQuery minDeviceWidth={768}>
-          <HorizontalScroll>
-            <div className="scrollWrapper">
-              <Navbar></Navbar>
-              {this.props.children()}
-            </div>
-          </HorizontalScroll>
-        </MediaQuery>
-
+    const ScrollContent = (
+      <div className="scrollWrapper">
+        <Navbar></Navbar>
+        {this.props.children()}
       </div>
     );
+
+    console.log(this.state.isTouch)
+    if (this.state.isTouch === false) {
+      return (
+        <div>
+  
+          <Helmet htmlAttributes={{"lang": language}}>
+            <title>JNJ Art Group</title>
+          </Helmet>
+  
+        
+        <HorizontalScroll>
+          {ScrollContent}
+        </HorizontalScroll>
+  
+        </div>
+      );
+    }
+
+    return (
+      <div>
+  
+      <Helmet htmlAttributes={{"lang": language}}>
+        <title>JNJ Art Group</title>
+      </Helmet>
+
+      {ScrollContent}
+
+    </div>
+    )
+
   }
 }
 

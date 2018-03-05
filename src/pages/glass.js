@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 
-import Image from '../components/Image'
+import Toggle from '../components/Toggle';
 
 
 export default class GlassPage extends React.Component {
@@ -20,6 +20,7 @@ export default class GlassPage extends React.Component {
         <p>
           <span className="en">{post.frontmatter.description}</span>
           <span className="cs">{post.frontmatter.popis}</span>
+          <Toggle />
         </p>
       </header>
           );

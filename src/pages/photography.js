@@ -4,10 +4,12 @@ import Img from "gatsby-image";
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 
-import Image from '../components/Image'
+import Toggle from '../components/Toggle';
 
+import mediumZoom from 'medium-zoom'
 
 export default class PhotographyPage extends React.Component {
+
 
   render() {
     const { data } = this.props;
@@ -20,6 +22,7 @@ export default class PhotographyPage extends React.Component {
         <p>
           <span className="en">{post.frontmatter.description}</span>
           <span className="cs">{post.frontmatter.popis}</span>
+          <Toggle />
         </p>
       </header>
           );
@@ -28,13 +31,14 @@ export default class PhotographyPage extends React.Component {
 
             const aspect = post.frontmatter.thumbnail.childImageSharp.sizes.aspectRatio
             const styleData = { width: `calc(var(--height)*${aspect})` }
+          
 
             return (
               <figure className="thumbnail" key={post.id}>
                 <Img
                   sizes={post.frontmatter.thumbnail.childImageSharp.sizes}
                   style={styleData}
-                  title={post.frontmatter.title}
+                  alt={post.frontmatter.title}
                 />
                 <figcaption>
                     <span className="cs">{post.frontmatter.cena} CZK</span>
@@ -49,31 +53,31 @@ export default class PhotographyPage extends React.Component {
 }
 
 export const photographyPageQuery = graphql`
-  query photographyQuery {
-    allMarkdownRemark(filter: {frontmatter: {category: { eq: "photography" } }}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            templateKey
-            category
-            nazev
-            title
-            cena
-            price
-            thumbnail {
-              childImageSharp {
-                sizes(maxWidth: 700) {
-                  ...GatsbyImageSharpSizes
-                  aspectRatio
-                }
+query photographyQuery {
+  allMarkdownRemark(filter: {frontmatter: {category: { eq: "photography" } }}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          templateKey
+          category
+          nazev
+          title
+          cena
+          price
+          thumbnail {
+            childImageSharp {
+              sizes(maxWidth: 700) {
+                ...GatsbyImageSharpSizes
+                aspectRatio
               }
             }
-            description
-            popis
           }
+          description
+          popis
         }
       }
     }
   }
+}
 `;
