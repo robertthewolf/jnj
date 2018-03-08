@@ -79,6 +79,12 @@ div[data-reactroot]
   > *
     max-height: 100%
 
+.scroll-horizontal
+  div
+    @include breakpoint(sm)
+      display: block !important
+      position: static !important
+
 .scrollWrapper
   @include breakpoint(lg)
     display: flex
@@ -171,9 +177,6 @@ nav
         width: 100%
         height: 100%
         overflow: visible !important
-        @include breakpoint(sm)
-          display: block !important
-          position: static !important
         img
           height: 100%
 
