@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 export default class Toggle extends React.Component {
   state = {
-      language: typeof window !== 'undefined'? navigator.userLanguage || navigator.language : 'cs-CZ',
+      language: typeof window !== 'undefined'? document.documentElement.getAttribute('lang') : 'cs-CZ',
       isCzech: this.language !== 'cs-CZ'? false : true
   };
   

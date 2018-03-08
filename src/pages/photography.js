@@ -6,7 +6,6 @@ import Script from 'react-load-script';
 
 import Toggle from '../components/Toggle';
 
-import mediumZoom from 'medium-zoom'
 
 export default class PhotographyPage extends React.Component {
 

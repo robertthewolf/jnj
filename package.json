@@ -19,6 +19,7 @@
     "gatsby-transformer-sharp": "^1.6.16",
     "graphql-tag": "^2.6.1",
     "medium-zoom": "^0.3.0",
+    "mobile-detect": "^1.4.1",
     "react-apollo": "^2.0.4",
     "react-load-script": "0.0.6",
     "react-responsive": "^4.0.4",
