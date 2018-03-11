@@ -1,26 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default class Toggle extends React.Component {
-  state = {
-      language: typeof window !== 'undefined'? document.documentElement.getAttribute('lang') : 'cs-CZ',
-      isCzech: this.language === 'cs-CZ'? true : false
-  };
-  
-  handleClick = () => {
-    this.setState({
-      isCzech: !this.state.isCzech
-    })
-  }
+//redux
+import { connect } from "react-redux";
 
-  render() {
-    const language = this.state.isCzech ? 'cs-CZ' : 'en-GB'
+const Toggle = ({ isCzech, dispatch }) => (
 
-    return (
-      <button onClick={this.handleClick}>
-        <Helmet htmlAttributes={{"lang": language}} />
-        {this.state.isCzech ? 'EN' : 'CS'}
-      </button>
-    );
-  }
-}
+  <button onClick={() => dispatch({
+      type: 'TOGGLE_LANGUAGE',
+    })}>
+    <Helmet htmlAttributes={{"lang": isCzech? 'cs-CZ' : 'en-GB'}} />
+    {isCzech? 'EN' : 'CS'}
+    {console.log(isCzech)}
+  </button>
+
+);
+
+const mapStateToProps = (state) => ({
+  isCzech: state.language.isCzech
+})
+
+export default connect(mapStateToProps)(Toggle);

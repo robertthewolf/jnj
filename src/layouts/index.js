@@ -6,13 +6,25 @@ import Typography from 'typography';
 import './all.sass';
 
 import HorizontalScroll from 'react-scroll-horizontal';
-import MediaQuery from 'react-responsive';
 
 import Navbar from '../components/Navbar';
+
+//redux
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from './rootReducer';
 
 //working on this!
 import mediumZoom from 'medium-zoom'
 
+
+
+const store = createStore(
+  rootReducer,
+  {},
+  composeWithDevTools()
+);
 
 class TemplateWrapper extends React.Component {
 
@@ -26,10 +38,11 @@ class TemplateWrapper extends React.Component {
     })
   }
 
+  componentDidMount() {
+   }
+
   render() {
     
-    const language = typeof window !== 'undefined'? navigator.userLanguage || navigator.language : 'cs-CZ';
-
     const ScrollContent = (
       <div className="scrollWrapper">
         <Navbar></Navbar>
@@ -46,15 +59,17 @@ class TemplateWrapper extends React.Component {
     if (this.state.isTouch === true) ScrollContainer = ScrollContent;
 
     return (
+      <Provider store={store}>
       <div onTouchStart={this.handleTouchStart}>
   
-        <Helmet htmlAttributes={{"lang": language}}>
+        <Helmet>
           <title>JNJ Art Group</title>
         </Helmet>
 
         {ScrollContainer}
 
       </div>
+      </Provider>
     )
 
   }
