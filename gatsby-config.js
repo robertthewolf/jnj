@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `JNJ Art Group`
+    title: `JNJ Art Group`,
+    siteUrl: `https://www.jnjartgroup.cz`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

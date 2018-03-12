@@ -100,8 +100,8 @@ nav
     flex-shrink: 0
 
     width: 5em
-    margin-left: 15vh
-    margin-right: 15vh
+    margin-left: 5em
+    margin-right: 5em
   a
     @include breakpoint(sm)
       display: flex
@@ -152,7 +152,7 @@ nav
     flex-direction: column
     flex-wrap: wrap
 
-    min-width: 100vw
+    min-width: calc(100vw - 11em)
 
   > header
     order: 2
@@ -245,6 +245,18 @@ footer
     display: block
     &:hover
       text-decoration: none
+  .socials
+    a
+      display: inline-block
+      padding: 1em 1em 1em 0
+      transition: border-bottom-width .3s ease
+      img
+        width: 1em
+        padding-bottom: .3rem
+        border-bottom: 0px solid white
+        vertical-align: top
+      &:hover img
+        border-bottom-width: 2px
 
 .signature
   font-size: .8rem

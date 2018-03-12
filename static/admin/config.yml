@@ -72,6 +72,7 @@ collections:
               - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
               - {label: "Popis", name: "popis", widget: "text"}
               - {label: "Description", name: "description", widget: "text"}
+              - {label: "Úvodní fotka", name: "thumbnail", widget: "image"}
           - label: "Kontakt"
             name: "contact"
             widget: "object"

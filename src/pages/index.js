@@ -1,9 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Image from 'gatsby-image';
 import Helmet from 'react-helmet';
 import Script from 'react-load-script';
 import Toggle from '../components/Toggle';
 import Signature from '../components/Signature';
+
+import facebookLogo from '../img/facebook.svg';
+import instagramLogo from '../img/instagram.svg';
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -34,6 +38,7 @@ export default class IndexPage extends React.Component {
             <span className="cs">{post.frontmatter.popis}</span>
             <Toggle/>
           </p>
+          <Image sizes={post.frontmatter.thumbnail.childImageSharp.sizes} alt="JNJ Art Group" />
         </header>
         <footer>
 
@@ -41,9 +46,15 @@ export default class IndexPage extends React.Component {
             <span className="en">{post.frontmatter.order}</span>
             <span className="cs">{post.frontmatter.objednavka}</span>
           </p>
-          <a href="mailto:jnjartgroup@gmail.com">jnjartgroup@gmail.com</a>
-          <a href="tel:+420776833746">+420 776 833 746</a>
+          <a href={`mailto:${post.frontmatter.email}`}>{post.frontmatter.email}</a>
+          <a href={`tel:${post.frontmatter.phone}`}>{post.frontmatter.phone}</a>
           <div className="socials">
+            <a href={post.frontmatter.facebook}>
+              <img src={facebookLogo} alt="facebook" />
+            </a>
+            <a href={post.frontmatter.instagram}>
+              <img src={instagramLogo} alt="instagram" />
+            </a>
           </div>
           <Signature/>
           </footer>
@@ -60,8 +71,20 @@ export const indexPageQuery = graphql`
         nazev
         popis
         description
+        thumbnail {
+          childImageSharp {
+            sizes(maxWidth: 1000) {
+              ...GatsbyImageSharpSizes
+              aspectRatio
+            }
+          }
+        }
         order
         objednavka
+        email
+        phone
+        facebook
+        instagram
       }
     }
 }

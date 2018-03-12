@@ -71,7 +71,7 @@ query photographyQuery($category: String!) {
           price
           thumbnail {
             childImageSharp {
-              sizes(maxWidth: 700) {
+              sizes(maxWidth: 1000) {
                 ...GatsbyImageSharpSizes
                 aspectRatio
               }
