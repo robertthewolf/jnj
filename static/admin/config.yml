@@ -69,7 +69,7 @@ collections:
             name: "about"
             widget: "object"
             fields:
-              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "setting"}
               - {label: "Popis", name: "popis", widget: "text"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Úvodní fotka", name: "thumbnail", widget: "image"}

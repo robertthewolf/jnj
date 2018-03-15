@@ -1,6 +1,6 @@
 ---
 templateKey: 'page'
 category: photography
-popis: 'Ikonický design docílen nejnovějšími postupy v oboru. Stále si však šperky nesou své klasické funkce: Krásu, reprezentaci nositele i investiční.'
-description: 'Iconic designs made by latest industry techniques, but still with the classic functions such as beauty and rich investment.'
+popis: Desítky let za objektivem fotoaparátu s citem pro symboliku, a umění zachytit koláž mystifikační technikou. To jsou díla Vladislava Krédla.
+description: Many years behind the camera and a sense for symbolism and art; that's the creativity of Vladislav Krédl.
 ---
