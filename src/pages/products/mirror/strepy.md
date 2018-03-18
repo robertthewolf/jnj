@@ -3,7 +3,7 @@ templateKey: 'single'
 category: mirror
 nazev: Střepy
 title: Shards
-cena: '2500'
-price: '100'
+cena: '2500 Kč'
+price: '100 EUR'
 thumbnail: /img/zrcadlo-strepy.jpg
 ---

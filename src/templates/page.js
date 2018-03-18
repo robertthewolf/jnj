@@ -36,8 +36,8 @@ export const PageTemplate = ({
                 alt={post.frontmatter.title}
             />
             <figcaption>
-                <span className="cs">{post.frontmatter.cena} CZK</span>
-                <span className="en">{post.frontmatter.price} EUR</span>
+                <span className="cs">{post.frontmatter.cena}</span>
+                <span className="en">{post.frontmatter.price}</span>
             </figcaption>
             </figure>
         );
