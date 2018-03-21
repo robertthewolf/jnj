@@ -65,28 +65,16 @@ collections:
         label: "Hlavní stránka"
         name: "frontpage"
         fields:
-          - label: "O nás"
-            name: "about"
-            widget: "object"
-            fields:
-              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "setting"}
-              - {label: "Popis", name: "popis", widget: "text"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Úvodní fotka", name: "thumbnail", widget: "image"}
-          - label: "Kontakt"
-            name: "contact"
-            widget: "object"
-            fields:
-              - {label: "Facebook", name: "facebook", widget: "string"}
-              - {label: "Instagram", name: "instagram", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Telefon", name: "phone", widget: "string"}
-          - label: "Objednávka"
-            name: "order"
-            widget: "object"
-            fields:
-              - {label: "Objednávka", name: "objednavka", widget: "text"}
-              - {label: "Order", name: "order", widget: "text"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "setting"}
+          - {label: "Popis", name: "popis", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Úvodní fotka", name: "thumbnail", widget: "image"}
+          - {label: "Facebook", name: "facebook", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Objednávka", name: "objednavka", widget: "text"}
+          - {label: "Order", name: "order", widget: "text"}
       - file: "src/pages/categories/mirror.md"
         label: "Zrcadlo"
         name: "mirror-page"
