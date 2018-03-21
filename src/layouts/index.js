@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import logo from '../img/logo.svg';
 import Typography from 'typography';
 import './all.sass';
+
+// images and favicon
+import logo from '../img/logo.svg';
+import appleTouchIcon from '../img/apple-touch-icon.png';
+import favicon32 from '../img/favicon-32x32.png';
+import favicon16 from '../img/favicon-16x16.png';
+import safariPinnedTab from '../img/safari-pinned-tab.svg';
+
 
 import HorizontalScroll from 'react-scroll-horizontal';
 
@@ -63,7 +70,16 @@ class TemplateWrapper extends React.Component {
       <div onTouchStart={this.handleTouchStart}>
   
         <Helmet>
+          <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <link rel="manifest" href="/other/site.webmanifest" />
+          <link rel="mask-icon" href={safariPinnedTab} color="#535353" />
+          <meta name="msapplication-TileColor" content="#535353" />
+          <meta name="theme-color" content="#ffffff" />
+
           <title>JNJ Art Group</title>
+
         </Helmet>
 
         {ScrollContainer}
