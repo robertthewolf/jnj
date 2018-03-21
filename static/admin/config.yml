@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: wolfrobert35/jnj
+  repo: jnjartgroup/jnj
 
 media_folder: static/img
 public_folder: /img
