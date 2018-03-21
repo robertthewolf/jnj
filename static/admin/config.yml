@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jnjartgroup/jnj
+  repo: wolfrobert35/jnj
 
 media_folder: static/img
 public_folder: /img
@@ -61,7 +61,7 @@ collections:
   - name: "general"
     label: "Obecně"
     files:
-      - file: "src/categories/general.md"
+      - file: "src/pages/categories/general.md"
         label: "Hlavní stránka"
         name: "frontpage"
         fields:
@@ -87,7 +87,7 @@ collections:
             fields:
               - {label: "Objednávka", name: "objednavka", widget: "text"}
               - {label: "Order", name: "order", widget: "text"}
-      - file: "src/categories/mirror.md"
+      - file: "src/pages/categories/mirror.md"
         label: "Zrcadlo"
         name: "mirror-page"
         fields:
@@ -95,7 +95,7 @@ collections:
           - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "number"}
-      - file: "src/categories/photography.md"
+      - file: "src/pages/categories/photography.md"
         label: "Zrcadlo"
         name: "photography-page"
         fields:
@@ -103,7 +103,7 @@ collections:
           - {label: "Category", name: "category", widget: "hidden", default: "photography"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "number"}
-      - file: "src/categories/jewellery.md"
+      - file: "src/pages/categories/jewellery.md"
         label: "Zrcadlo"
         name: "jewellery-page"
         fields:
@@ -111,7 +111,7 @@ collections:
           - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "number"}
-      - file: "src/categories/glass.md"
+      - file: "src/pages/categories/glass.md"
         label: "Zrcadlo"
         name: "glass-page"
         fields:
