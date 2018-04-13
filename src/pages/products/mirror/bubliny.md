@@ -1,8 +1,8 @@
 ---
 templateKey: 'single'
 category: mirror
-nazev: Bubliny
-title: Bubbles
+nazev: 
+title: 
 cena: '2700 Kč'
 price: '108 EUR'
 thumbnail: /img/zrcadlo-bubliny.jpg

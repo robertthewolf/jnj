@@ -8,6 +8,6 @@ objednavka: Pro objednávku nás prosim kontatkujte na uvedené emailové adrese
 order: For order please contact us on the email address or via phone. Delivery around Czech Republic is under one week.
 facebook: https://www.facebook.com/jnjartgroup/
 instagram: https://www.instagram.com/jnjartgroup/
-email: jnjartgroup@gmail.com
+email: jnjonasnovak@gmail.com
 phone: '+420776833746'
 ---

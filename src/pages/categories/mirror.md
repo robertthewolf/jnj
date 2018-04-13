@@ -1,6 +1,9 @@
 ---
-templateKey: 'page'
+templateKey: page
 category: mirror
-popis: 'Ikonický design docílen nejnovějšími postupy v oboru. Stále si však šperky nesou své klasické funkce: Krásu, reprezentaci nositele i investiční.'
-description: 'Iconic designs made by latest industry techniques, but still with the classic functions such as beauty and rich investment.'
+popis: "Estetika s\_každonnění užitečností /spojení zrcadla a\_obrazu v\_1dno je propojení 2ou funkcí, jež se vzájemně doplňují."
+description: >-
+  Aesthetics combined with daily usage. Mirror and pictures connected as one is
+  something new but still workable these days.
 ---
+

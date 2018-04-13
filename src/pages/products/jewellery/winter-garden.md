@@ -1,8 +1,8 @@
 ---
 templateKey: 'single'
 category: jewellery
-nazev: Zimní krajina
-title: Winter Garden
+nazev: 
+title: 
 cena: '6000 Kč'
 price: '240 EUR'
 thumbnail: /img/sperk-zimni-krajina.jpg

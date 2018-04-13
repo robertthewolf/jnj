@@ -1,9 +1,10 @@
 ---
-templateKey: 'single'
+templateKey: single
 category: glass
-nazev: Černé
-title: Black
-cena: '900 Kč / 6ks'
-price: '36 EUR / 6pcs'
+nazev: 6ks
+title: 6pcs
+cena: 1200 Kč
+price: 48 EUR
 thumbnail: /img/sklo-black3.jpg
 ---
+

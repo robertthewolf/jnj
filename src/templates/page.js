@@ -38,6 +38,7 @@ export const PageTemplate = ({
             <figcaption>
                 <span className="cs">{post.frontmatter.cena}</span>
                 <span className="en">{post.frontmatter.price}</span>
+                <small>{post.frontmatter.title}</small>
             </figcaption>
             </figure>
         );
@@ -65,7 +66,6 @@ query photographyQuery($category: String!) {
         frontmatter {
           templateKey
           category
-          nazev
           title
           cena
           price

@@ -1,8 +1,8 @@
 ---
 templateKey: 'single'
 category: jewellery
-nazev: Náušnice
-title: Earings
+nazev: 
+title: 
 cena: '1200 Kč'
 price: '48 EUR'
 thumbnail: /img/sperk-nausnice-dlouhe.jpg
