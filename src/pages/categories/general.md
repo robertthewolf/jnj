@@ -1,5 +1,6 @@
 ---
 templateKey: setting
+category: general
 popis: >-
   Jsme oficiální prodejce českého umění od roku 2018. Zaměřujeme se na
   individualitu a jedinečnost našich produktů.

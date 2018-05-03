@@ -6,7 +6,6 @@ import Script from 'react-load-script';
 
 import Toggle from '../components/Toggle';
 
-
 export const PageTemplate = ({
     posts,
 }) => (

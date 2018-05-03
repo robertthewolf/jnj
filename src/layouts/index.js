@@ -22,8 +22,6 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './rootReducer';
 
-//working on this!
-import mediumZoom from 'medium-zoom'
 
 
 
@@ -44,9 +42,6 @@ class TemplateWrapper extends React.Component {
       isTouch: true
     })
   }
-
-  componentDidMount() {
-   }
 
   render() {
     
