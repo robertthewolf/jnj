@@ -11,27 +11,27 @@ return(
       </Link>
       <ul>
         <li>
-          <Link activeClassName="active" to={`/mirror/`}>
-            <span className="en">Mirror</span>
-            <span className="cs">Zrcadlo</span>
+          <Link activeClassName="active" to={`/architecture/`}>
+            <span className="en">Architecture</span>
+            <span className="cs">Architektura</span>
           </Link>
         </li>
         <li>
-          <Link activeClassName="active" to={`/photography/`}>
-            <span className="en">Photography</span>
-            <span className="cs">Fotka</span>
+          <Link activeClassName="active" to={`/fashion/`}>
+            <span className="en">Fashion</span>
+            <span className="cs">Fashion</span>
           </Link>
         </li>
         <li>
-          <Link activeClassName="active" to={`/jewellery/`}>
-            <span className="en">Jewellery</span>
-            <span className="cs">Šperk</span>
+          <Link activeClassName="active" to={`/street/`}>
+            <span className="en">Street</span>
+            <span className="cs">Street</span>
           </Link>
         </li>
         <li>
-          <Link activeClassName="active" to={`/glass/`}>
-            <span className="en">Glass</span>
-            <span className="cs">Sklo</span>
+          <Link activeClassName="active" to={`/product/`}>
+            <span className="en">Product</span>
+            <span className="cs">Produkt</span>
           </Link>
         </li>
       </ul>
