@@ -23,7 +23,7 @@ export const PageTemplate = ({
     })}
         {posts.filter(post => post.node.frontmatter.templateKey === 'single').map(({ node: post }) => {
             
-        if (post.frontmatter.thumbnail === undefined) return null;
+        if (post.frontmatter.thumbnail == null) return null;
 
         const aspect = post.frontmatter.thumbnail.childImageSharp.sizes.aspectRatio
         const styleData = { width: `calc(var(--height)*${aspect})` }
