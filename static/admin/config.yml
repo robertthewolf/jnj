@@ -74,33 +74,33 @@ collections:
           - {label: "Telefon", name: "phone", widget: "string"}
           - {label: "Objednávka", name: "objednavka", widget: "text"}
           - {label: "Order", name: "order", widget: "text"}
-      - file: "src/pages/categories/mirror.md"
-        label: "Zrcadlo"
-        name: "mirror-page"
+      - file: "src/pages/categories/architecture.md"
+        label: "Architecture"
+        name: "architecture-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
-      - file: "src/pages/categories/photography.md"
-        label: "Fotka"
-        name: "photography-page"
+      - file: "src/pages/categories/fashion.md"
+        label: "Fashion"
+        name: "fashion-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Category", name: "category", widget: "hidden", default: "photography"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
-      - file: "src/pages/categories/jewellery.md"
-        label: "Šperk"
-        name: "jewellery-page"
+      - file: "src/pages/categories/Street.md"
+        label: "street"
+        name: "street-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
-      - file: "src/pages/categories/glass.md"
-        label: "Sklo"
-        name: "glass-page"
+      - file: "src/pages/categories/product.md"
+        label: "Product"
+        name: "product-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Category", name: "category", widget: "hidden", default: "glass"}
