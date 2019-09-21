@@ -5,8 +5,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "mirror"
-    label: "Zrcadlo"
+  - name: "architecture"
+    label: "Architecture"
     folder: "src/pages/products/mirror"
     create: true
     fields:
@@ -18,8 +18,8 @@ collections:
       - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
-  - name: "photography"
-    label: "Fotka"
+  - name: "fashion"
+    label: "Fashion"
     folder: "src/pages/products/photography"
     create: true
     fields:
@@ -31,8 +31,8 @@ collections:
       - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
-  - name: "jewellery"
-    label: "Šprek"
+  - name: "street"
+    label: "Street"
     folder: "src/pages/products/jewellery"
     create: true
     fields:
@@ -44,8 +44,8 @@ collections:
       - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
-  - name: "glass"
-    label: "Sklo"
+  - name: "product"
+    label: "Product"
     folder: "src/pages/products/glass"
     create: true
     fields:
