@@ -12,11 +12,7 @@ facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjartgroup/'
 email: jnjonasnovak@gmail.com
 phone: '+420776833746'
-objednavka: >-
-  Pro objednávku nás prosim kontaktujte na uvedené emailové adrese nebo přes
-  telefon. Dodání po ČR je týden od objednání.
-order: >-
-  For order please contact us on the email address or via phone. Delivery around
-  Czech Republic is under one week.
+objednavka: '   ...'
+order: '  ...'
 ---
 
