@@ -9,8 +9,8 @@ description: >-
   individuality and uniqueness in our products.
 thumbnail: /img/hero.jpg
 facebook: 'https://www.facebook.com/jnjartgroup/'
-instagram: 'https://www.instagram.com/jnjartgroup/'
-email: jnjonasnovak@gmail.com
+instagram: 'https://www.instagram.com/jnjphotographer/'
+email: jonasnovak@email.cz
 phone: '+420776833746'
 objednavka: '   ...'
 order: '  ...'
