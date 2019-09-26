@@ -12,7 +12,7 @@ facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjphotographer/'
 email: jonasnovak@email.cz
 phone: '+420776833746'
-objednavka: '   ...'
-order: '  ...'
+objednavka: contact
+order: contact
 ---
 
