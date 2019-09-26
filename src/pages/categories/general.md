@@ -7,7 +7,7 @@ popis: >-
 description: >-
   We are an official seller of Czech art from 2018, with a focus on
   individuality and uniqueness in our products.
-thumbnail: /img/hero.jpg
+thumbnail: /img/dscf7351.jpg
 facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjphotographer/'
 email: jonasnovak@email.cz
