@@ -3,7 +3,7 @@ templateKey: setting
 category: general
 popis: jonas novak photogapher
 description: jonas novak photogapher
-thumbnail: /img/dscf7351.jpg
+thumbnail: /img/dscf1686.jpg
 facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjphotograph/?hl=en'
 email: jonasnovak@email.cz
