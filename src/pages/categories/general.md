@@ -1,8 +1,8 @@
 ---
 templateKey: setting
 category: general
-popis: portfolio
-description: portfolio
+popis: JONÁŠ NOVÁK
+description: JONAS NOVAK
 thumbnail: /img/dscf7351.jpg
 facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjphotograph/?hl=en'
