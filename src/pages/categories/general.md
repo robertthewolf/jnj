@@ -1,8 +1,8 @@
 ---
 templateKey: setting
 category: general
-popis: jonas novak photogapher
-description: jonas novak photogapher
+popis: jonas novak photographer
+description: jonas novak photographer
 thumbnail: /img/dscf1686.jpg
 facebook: 'https://www.facebook.com/jnjartgroup/'
 instagram: 'https://www.instagram.com/jnjphotograph/?hl=en'
