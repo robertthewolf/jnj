@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: mirror
+category: architecture
 nazev: singapore 44 floor
 title: building
 cena: '0000'

@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: mirror
+category: architecture
 nazev: ntu
 title: ntu
 cena: '0000'

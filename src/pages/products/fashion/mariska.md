@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: photography
+category: fashion
 nazev: mariska
 title: mariska
 cena: '0000'

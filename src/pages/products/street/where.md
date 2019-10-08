@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: jewellery
+category: street
 nazev: kam
 title: where
 cena: '0000'

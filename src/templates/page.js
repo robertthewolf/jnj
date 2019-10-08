@@ -37,9 +37,11 @@ export const PageTemplate = ({
                 alt={post.frontmatter.title}
             />
             <figcaption>
-                <span className="cs">{post.frontmatter.cena}</span>
-                <span className="en">{post.frontmatter.price}</span>
-                <small>{post.frontmatter.title}</small>
+                <span className="cs">{post.frontmatter.nazev}</span>
+                <span className="en">{post.frontmatter.title}</span>
+                {/* <span className="cs">{post.frontmatter.cena}</span> */}
+                {/* <span className="en">{post.frontmatter.price}</span> */}
+                {/* <small>{post.frontmatter.title}</small> */}
             </figcaption>
             </figure>
         );
@@ -58,8 +60,8 @@ export default ({ data }) => {
   }
 
 
-export const photographyPageQuery = graphql`
-query photographyQuery($category: String!) {
+export const PageQuery = graphql`
+query categoryQuery($category: String!) {
   allMarkdownRemark(filter: {frontmatter: {category: { eq: $category } }}) {
     edges {
       node {
@@ -68,6 +70,7 @@ query photographyQuery($category: String!) {
           templateKey
           category
           title
+          nazev
           cena
           price
           thumbnail {

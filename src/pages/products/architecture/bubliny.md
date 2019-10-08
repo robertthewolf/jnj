@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: mirror
+category: architecture
 nazev: gardens
 title: gardens
 cena: '0000'

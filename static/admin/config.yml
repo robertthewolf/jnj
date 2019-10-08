@@ -7,53 +7,54 @@ public_folder: /img
 collections:
   - name: "architecture"
     label: "Architecture"
-    folder: "src/pages/products/mirror"
+    folder: "src/pages/products/architecture"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
-      - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
+      - {label: "Category", name: "category", widget: "hidden", default: "architecture"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Cena v CZK", name: "cena", widget: "string"}
-      - {label: "Price in EUR", name: "price", widget: "string"}
+      # - {label: "Cena v CZK", name: "cena", widget: "string"}
+      # - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
   - name: "fashion"
     label: "Fashion"
-    folder: "src/pages/products/photography"
+    folder: "src/pages/products/fashion"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
-      - {label: "Category", name: "category", widget: "hidden", default: "photography"}
+      - {label: "Category", name: "category", widget: "hidden", default: "fashion"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Cena v CZK", name: "cena", widget: "string"}
-      - {label: "Price in EUR", name: "price", widget: "string"}
+      # - {label: "Cena v CZK", name: "cena", widget: "string"}
+      # - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
   - name: "street"
     label: "Street"
-    folder: "src/pages/products/jewellery"
+    folder: "src/pages/products/street"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
-      - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
+      - {label: "Category", name: "category", widget: "hidden", default: "street"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Cena v CZK", name: "cena", widget: "string"}
-      - {label: "Price in EUR", name: "price", widget: "string"}
+      # - {label: "Cena v CZK", name: "cena", widget: "string"}
+      # - {label: "Price in EUR", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
   - name: "product"
     label: "Product"
-    folder: "src/pages/products/glass"
+    folder: "src/pages/products/product"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
-      - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
-      - {label: "Popisek", name: "title", widget: "string"}
-      - {label: "Cena", name: "cena", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Category", name: "category", widget: "hidden", default: "architecture"}
+      - {label: "Název", name: "nazev", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      # - {label: "Cena", name: "cena", widget: "string"}
+      # - {label: "Price", name: "price", widget: "string"}
       - {label: "Obrázek", name: "thumbnail", widget: "image"}
 
   - name: "general"
@@ -79,7 +80,7 @@ collections:
         name: "architecture-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-          - {label: "Category", name: "category", widget: "hidden", default: "mirror"}
+          - {label: "Category", name: "category", widget: "hidden", default: "architecture"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
       - file: "src/pages/categories/fashion.md"
@@ -87,7 +88,7 @@ collections:
         name: "fashion-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-          - {label: "Category", name: "category", widget: "hidden", default: "photography"}
+          - {label: "Category", name: "category", widget: "hidden", default: "fashion"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
       - file: "src/pages/categories/Street.md"
@@ -95,7 +96,7 @@ collections:
         name: "street-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-          - {label: "Category", name: "category", widget: "hidden", default: "jewellery"}
+          - {label: "Category", name: "category", widget: "hidden", default: "street"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
       - file: "src/pages/categories/product.md"
@@ -103,6 +104,6 @@ collections:
         name: "product-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-          - {label: "Category", name: "category", widget: "hidden", default: "glass"}
+          - {label: "Category", name: "category", widget: "hidden", default: "product"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}

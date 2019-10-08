@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: photography
+category: fashion
 nazev: elisa
 title: elisa
 cena: '0000'

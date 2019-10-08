@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: mirror
+category: architecture
 nazev: marina bay
 title: marina bay
 cena: '0000'

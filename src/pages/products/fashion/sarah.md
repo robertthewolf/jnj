@@ -1,6 +1,6 @@
 ---
 templateKey: single
-category: photography
+category: fashion
 nazev: sarah
 title: sarah
 cena: '0000'

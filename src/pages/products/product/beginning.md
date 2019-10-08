@@ -1,8 +1,8 @@
 ---
 templateKey: single
-category: jewellery
-nazev: national gallery
-title: national gallery
+category: product
+nazev: test
+title: test
 cena: '0000'
 price: '0000'
 thumbnail: /img/dscf5116.jpg
