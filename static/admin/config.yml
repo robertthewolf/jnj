@@ -92,7 +92,7 @@ collections:
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
       - file: "src/pages/categories/street.md"
-        label: "street"
+        label: "Street"
         name: "street-page"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
