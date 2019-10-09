@@ -91,7 +91,7 @@ collections:
           - {label: "Category", name: "category", widget: "hidden", default: "fashion"}
           - {label: "Popis", name: "popis", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
-      - file: "src/pages/categories/Street.md"
+      - file: "src/pages/categories/street.md"
         label: "street"
         name: "street-page"
         fields:
