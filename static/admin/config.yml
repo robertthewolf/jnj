@@ -50,7 +50,7 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "single"}
-      - {label: "Category", name: "category", widget: "hidden", default: "architecture"}
+      - {label: "Category", name: "category", widget: "hidden", default: "product"}
       - {label: "Název", name: "nazev", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       # - {label: "Cena", name: "cena", widget: "string"}
