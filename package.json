@@ -28,7 +28,7 @@
     "react-scroll-horizontal": "1.2.1",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
-    "sharp": "^0.20.1"
+    "sharp": "^0.30.5"
   },
   "keywords": [
     "gatsby"
