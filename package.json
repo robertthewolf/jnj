@@ -16,7 +16,7 @@
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-images": "^1.5.39",
     "gatsby-source-filesystem": "^1.5.5",
-    "gatsby-transformer-remark": "^1.7.17",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^1.6.16",
     "graphql-tag": "^2.6.1",
     "medium-zoom": "^0.3.0",
